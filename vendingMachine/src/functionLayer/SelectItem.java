@@ -21,8 +21,10 @@ public class SelectItem {
 		case "2":
 			ItemList.selectedItem = SelectItem.selectDrink(s);
 			break;
+		default:
+			ItemList.selectedItem = null;
 		}
-		ItemList.selectedItem = null;
+		
 	}
 
 	public static Snack selectSnack(Scanner s) {
