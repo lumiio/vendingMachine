@@ -8,8 +8,9 @@ public class dispenser {
 			if (ItemList.selectedItem.price > Payment.getBalance()) {
 				return 0;
 			} else {
-				ItemList.selectedItem = null;
+
 				Payment.setBalance(Payment.getBalance() - ItemList.selectedItem.price);
+				ItemList.selectedItem = null;
 				return 1;
 			}
 		} else {
