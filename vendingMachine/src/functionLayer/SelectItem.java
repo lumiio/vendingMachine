@@ -2,6 +2,7 @@ package functionLayer;
 
 import java.util.Scanner;
 
+import ViewLayer.UI;
 import dataLayer.Drink;
 import dataLayer.Item;
 import dataLayer.ItemList;
@@ -11,8 +12,7 @@ public class SelectItem {
 
 	public static void selectItem(Scanner s) {
 
-		System.out.println("1: Select Snack");
-		System.out.println("2: Select Drink");
+		UI.printItemSelection();
 		String input = s.nextLine();
 		switch (input) {
 		case "1":
@@ -24,9 +24,7 @@ public class SelectItem {
 	}
 
 	public static Snack selectSnack(Scanner s) {
-		for (int i = 0; i < ItemList.snacks.length; i++) {
-			System.out.println(i + ": " + ItemList.snacks[i].name);
-		}
+		UI.printSnacks();
 		String input = s.nextLine();
 		int snackNumber = Integer.parseInt(input);
 		return ItemList.snacks[snackNumber];
@@ -34,9 +32,7 @@ public class SelectItem {
 	}
 
 	public static Drink selectDrink(Scanner s) {
-		for (int i = 0; i < ItemList.drinks.length; i++) {
-			System.out.println(i + ": " + ItemList.drinks[i].name);
-		}
+		UI.printDrinks();
 		String input = s.nextLine();
 		int drinkNumber = Integer.parseInt(input);
 		return ItemList.drinks[drinkNumber];
