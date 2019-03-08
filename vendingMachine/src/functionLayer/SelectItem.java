@@ -17,8 +17,10 @@ public class SelectItem {
 		switch (input) {
 		case "1":
 			ItemList.selectedItem = SelectItem.selectSnack(s);
+			break;
 		case "2":
 			ItemList.selectedItem = SelectItem.selectDrink(s);
+			break;
 		}
 		ItemList.selectedItem = null;
 	}
